@@ -3,10 +3,7 @@ package org.wgalvez.ssalgorithms;
 import org.wgalvez.ssalgorithms.hastable.Hashtable;
 import org.wgalvez.ssalgorithms.quicksort.Quicksort;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,17 +36,10 @@ public class Main {
                     array[i] = numberR;
                 }
                 System.out.println("LISTA ORIGINAL");
-                System.out.print("[ ");
-                for (int l: array){
-                    System.out.print(l + " ");
-                }
+                System.out.print(Arrays.toString(array));
                 qs.quicksort(array, 0, array.length - 1);
-                System.out.println("]" + "\nLISTA ORDENADA POR ALGORITMO QUICKSORT");
-                System.out.print("[ ");
-                for (int l: array){
-                    System.out.print(l + " ");
-                }
-                System.out.print("]");
+                System.out.println("\nLISTA ORDENADA POR ALGORITMO QUICKSORT");
+                System.out.println(Arrays.toString(array));
             }else if (opc == 2){
                 Scanner sn = new Scanner(System.in);
                 System.out.print("Ingrese el tamaño de la lista a generar: ");
